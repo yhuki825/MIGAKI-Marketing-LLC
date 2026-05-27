@@ -1033,15 +1033,15 @@
   <nav id="nav">
     <div class="container">
       <div class="nav-inner">
-        <button class="nav-logo" onclick="scrollTo('top')">
+        <button class="nav-logo" onclick="smoothScrollTo('top')">
           <div class="nav-logo-icon"><span>M</span></div>
           <span class="nav-logo-text">MIGAKI Marketing</span>
         </button>
         <div class="nav-links">
-          <button class="nav-link" onclick="scrollTo('about')">私たちの想い</button>
-          <button class="nav-link" onclick="scrollTo('services')">事業内容</button>
-          <button class="nav-link" onclick="scrollTo('company')">会社概要</button>
-          <button class="nav-cta" onclick="scrollTo('cta')">ご相談・お問い合わせ</button>
+          <button class="nav-link" onclick="smoothScrollTo('services')">事業内容</button>
+          <button class="nav-link" onclick="smoothScrollTo('about')">私たちの想い</button>
+          <button class="nav-link" onclick="smoothScrollTo('company')">会社概要</button>
+          <button class="nav-cta" onclick="smoothScrollTo('cta')">ご相談・お問い合わせ</button>
         </div>
         <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="メニュー">
           <span></span><span></span><span></span>
@@ -1050,10 +1050,10 @@
     </div>
     <div id="mobile-menu">
       <div class="mobile-menu-inner">
-        <button class="mobile-link" onclick="scrollTo('about')">私たちの想い</button>
-        <button class="mobile-link" onclick="scrollTo('services')">事業内容</button>
-        <button class="mobile-link" onclick="scrollTo('company')">会社概要</button>
-        <button class="mobile-cta" onclick="scrollTo('cta')">ご相談・お問い合わせ</button>
+        <button class="mobile-link" onclick="smoothScrollTo('services')">事業内容</button>
+        <button class="mobile-link" onclick="smoothScrollTo('about')">私たちの想い</button>
+        <button class="mobile-link" onclick="smoothScrollTo('company')">会社概要</button>
+        <button class="mobile-cta" onclick="smoothScrollTo('cta')">ご相談・お問い合わせ</button>
       </div>
     </div>
   </nav>
@@ -1080,11 +1080,11 @@
             頑張り続けるのではなく、整理と仕組みで前に進める。上場企業での実務経験とデジタル技術を掛け合わせ、あなたのビジネスと暮らしを一枚の設計図にまとめます。
           </p>
           <div class="hero-btns">
-            <button class="btn-primary" onclick="scrollTo('cta')">
+            <button class="btn-primary" onclick="smoothScrollTo('cta')">
               無料個別相談を予約する
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
-            <button class="btn-outline" onclick="scrollTo('services')">事業内容を見る</button>
+            <button class="btn-outline" onclick="smoothScrollTo('services')">事業内容を見る</button>
           </div>
         </div>
         <!-- Image -->
@@ -1438,11 +1438,11 @@
         <div>
           <h4 class="footer-section-title">サイトマップ</h4>
           <ul class="footer-nav-list">
-            <li><button class="footer-nav-item" onclick="scrollTo('top')"><span class="footer-nav-dot"></span>トップ</button></li>
-            <li><button class="footer-nav-item" onclick="scrollTo('about')"><span class="footer-nav-dot"></span>私たちの想い</button></li>
-            <li><button class="footer-nav-item" onclick="scrollTo('services')"><span class="footer-nav-dot"></span>事業内容</button></li>
-            <li><button class="footer-nav-item" onclick="scrollTo('cta')"><span class="footer-nav-dot"></span>個別相談申し込み</button></li>
-            <li><button class="footer-nav-item" onclick="scrollTo('company')"><span class="footer-nav-dot"></span>会社概要</button></li>
+            <li><button class="footer-nav-item" onclick="smoothScrollTo('top')"><span class="footer-nav-dot"></span>トップ</button></li>            
+            <li><button class="footer-nav-item" onclick="smoothScrollTo('services')"><span class="footer-nav-dot"></span>事業内容</button></li>
+            <li><button class="footer-nav-item" onclick="smoothScrollTo('about')"><span class="footer-nav-dot"></span>私たちの想い</button></li>
+            <li><button class="footer-nav-item" onclick="smoothScrollTo('cta')"><span class="footer-nav-dot"></span>個別相談申し込み</button></li>
+            <li><button class="footer-nav-item" onclick="smoothScrollTo('company')"><span class="footer-nav-dot"></span>会社概要</button></li>
           </ul>
         </div>
       </div>
@@ -1461,7 +1461,7 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // ── Scroll helper ─────────────────────────────────────────────
-    function scrollTo(id) {
+    function smoothScrollTo(id) {
       var el = document.getElementById(id);
       if (el) el.scrollIntoView({ behavior: 'smooth' });
       // Close mobile menu
